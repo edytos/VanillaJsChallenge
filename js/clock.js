@@ -15,18 +15,18 @@ setInterval(getClock, 1000);
 
 const daysofweek = ["sun", "mon", "tus", "wed", "thu", "fri", "sat"];
 const month = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC",
+  "1월",
+  "2월",
+  "3월",
+  "4월",
+  "5월",
+  "6월",
+  "7월",
+  "8월",
+  "9월",
+  "10월",
+  "11월",
+  "12월",
 ];
 
 function clock() {
@@ -34,7 +34,7 @@ function clock() {
   let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
-  let day = h < 11 ? "AM" : "PM";
+  let day = h < 11 ? "오전" : "오후";
   const daytoday = today.getDay();
   const date = today.getDate();
   const mon = today.getMonth();
@@ -48,10 +48,12 @@ function clock() {
   document.getElementById("min").innerHTML = m;
   document.getElementById("sec").innerHTML = s;
   document.getElementById("time").innerHTML = day;
-  document.getElementById("day").innerHTML = date;
+  document.getElementById("day").innerHTML = `${date}일`;
   document.getElementById("month").innerHTML = month[mon];
-  document.getElementById("year").innerHTML = year;
+  document.getElementById("year").innerHTML = `${year}년`;
   document.getElementById(daysofweek[daytoday]).style.color = "#fff";
+  document.getElementById(daysofweek[daytoday]).style.fontWeight = "bold";
 }
 
-const inter = setInterval(clock, 1000);
+clock();
+setInterval(clock, 1000);
