@@ -11,7 +11,6 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const iWeather = document.querySelector("#w-icon");
       const city = document.querySelector("#city");
       const temperature = document.querySelector("#temper");
@@ -23,7 +22,7 @@ function onGeoOk(position) {
     }); // 원격 API 호출
 }
 function onGeoError() {
-  alert("어딘지 모르겠어...ㅜㅜ");
+  alert("위치를 확인할 수 없습니다.");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
