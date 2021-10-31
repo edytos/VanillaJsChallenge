@@ -11,12 +11,15 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const city = document.querySelector("#weather span:first-child");
-      const weather = document.querySelector("#weather span:nth-child(2)");
-      const temperature = document.querySelector("#weather span:last-child");
+      console.log(data);
+      const iWeather = document.querySelector("#w-icon");
+      const city = document.querySelector("#city");
+      const temperature = document.querySelector("#temper");
+      const iconNum = data.weather[0].icon;
+      iWeather.src = `http://openweathermap.org/img/wn/${iconNum}@2x.png`;
       city.innerText = data.name;
-      weather.innerText = data.weather[0].main;
-      temperature.innerText = `${data.main.temp}도씨`;
+      //temperature.innerHTML = `${parseInt(data.main.temp)} <small>℃</small>`;
+      temperature.innerHTML = `${parseInt(data.main.temp)}°`;
     }); // 원격 API 호출
 }
 function onGeoError() {

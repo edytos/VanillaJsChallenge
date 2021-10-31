@@ -15,14 +15,9 @@
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
   display: flex;
   text-align: center;
-  font-family: "Quicksand", "Helvetica", Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
   color: white;
-}
-
-#cal img {
-  width: 30px;
-  height: 30px;
 }
 
 .content {
@@ -32,6 +27,7 @@
   text-align: center;
 }
 
+/*Days Start*/
 .days {
   margin-top: -10px;
   color: rgba(255, 255, 255, 0.2);
@@ -40,19 +36,31 @@
   margin-left: 21px;
   font-size: 1.3rem;
 }
+/*Days End*/
 
-.text {
+/*Times Start*/
+.times {
   margin-top: -10px;
   font-size: 2.5rem;
 }
-
-#time {
+#hours,
+#min,
+#sec {
+  font-size: 1em;
+}
+#noon {
   font-size: 2rem;
 }
+/*Times End*/
 
-#date {
+/*Today Start*/
+.today {
   margin-top: -15px;
   margin-left: -100px;
+}
+#cal img {
+  width: 30px;
+  height: 30px;
 }
 span#year {
   position: absolute;
@@ -69,9 +77,4 @@ span#day {
   margin-top: 5px;
   margin-left: 98px;
 }
-
-#hours,
-#min,
-#sec {
-  font-size: 1em;
-}
+/*Today End*/

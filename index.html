@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/clock.css" />
+    <link rel="stylesheet" href="css/weather.css" />
     <title>Today's Note to Self</title>
   </head>
   <body id="bgimg">
@@ -21,13 +22,13 @@
           >&nbsp;<span id="fri">금</span>&nbsp;<span id="sat">토</span>
         </p>
         <br />
-        <!--Time-->
-        <p class="text">
+        <!--Times-->
+        <p class="times">
           <span id="hours"></span>:<span id="min"></span>:<span id="sec"></span
-          >&nbsp;&nbsp;<span id="time"></span>
+          >&nbsp;&nbsp;<span id="noon"></span>
         </p>
-        <!--Date-->
-        <p id="date">
+        <!--Today-->
+        <p class="today">
           <span id="cal">
             <img src="/img/calendar.png" alt="calendar" />
           </span>
@@ -38,7 +39,12 @@
       </div>
     </div>
     <!--End Clock-->
-    <!--<h2 id="clock">00:00:00</h2>-->
+    <div class="weather">
+      <img id="w-icon" src="" alt="" />
+      <p id="temper"></p>
+      <p id="city"></p>
+    </div>
+    <!--End Weather-->
     <form class="hidden" id="login-form">
       <input
         required
@@ -54,11 +60,6 @@
     </form>
     <ul id="todo-list"></ul>
     <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <div id="weather">
-      <span></span>
       <span></span>
       <span></span>
     </div>
