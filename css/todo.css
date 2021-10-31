@@ -1,12 +1,20 @@
 .todo {
-  width: 360px;
-  margin: 100px auto;
-  background: #f7f7f7;
+  position: absolute;
+  margin: auto;
+  top: 350px;
+  right: 10px;
+  width: 320px;
+  margin: auto;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .todo h1 {
-  background: #2980b9;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   margin: 0;
   padding: 10px 20px;
