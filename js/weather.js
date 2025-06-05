@@ -15,7 +15,7 @@ function onGeoOk(position) {
       const city = document.querySelector("#city");
       const temperature = document.querySelector("#temper");
       const iconNum = data.weather[0].icon;
-      iWeather.src = `http://openweathermap.org/img/wn/${iconNum}@2x.png`;
+      iWeather.src = `https://openweathermap.org/img/wn/${iconNum}@2x.png`;
       city.innerText = data.name;
       //temperature.innerHTML = `${parseInt(data.main.temp)} <small>℃</small>`;
       temperature.innerHTML = `${parseInt(data.main.temp)}°`;
